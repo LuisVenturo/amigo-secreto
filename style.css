@@ -90,6 +90,7 @@ body {
 .button-container {
     width: 300px;
     justify-content: center;
+    margin: 10px;
 }
 
 /* Estilos de entrada de texto */
@@ -125,6 +126,16 @@ button {
     background-color: #a1a1a1;
 }
 
+.button-reload{
+    padding: 15px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
 /* Listas */
 ul {
     list-style-type: none;
@@ -153,10 +164,31 @@ ul {
     font-size: 16px;
 }
 
+
 .button-draw img {
     margin-right: 40px;
 }
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+/* Botón reinciar juego */
+.button-reload {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: var(--color-tertiary);
+    font-size: 16px;
+}
+
+.button-reload img {
+    margin-right: 40px;
+}
+
+.button-reload:hover {
+    background-color: #a1a1a1;
 }
