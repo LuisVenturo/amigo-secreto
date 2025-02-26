@@ -194,6 +194,9 @@ ul {
 }
 
 @media (max-width: 480px) {
+    .header-banner {
+        flex-direction: column-reverse;
+    }
     .main-title {
         font-size: 32px;
     }
@@ -230,6 +233,9 @@ ul {
 
 
 @media (max-width: 768px) {
+    .header-banner {
+        flex-direction: column-reverse;
+    }
     .main-title {
         font-size: 40px;
     }
@@ -254,6 +260,7 @@ ul {
 
 
 @media (min-width: 1025px) {
+
     .main-content {
         max-width: 800px;
     }
