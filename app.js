@@ -1,4 +1,4 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
+
 let amigos = [];
 
 
@@ -38,11 +38,29 @@ function actualizarLista() {
 
     for (let i = 0; i < amigos.length; i++) {
         let li = document.createElement('li');
-        li.textContent = amigos[i];
+        li.textContent = amigos[i]+" ";
+
+        // Crear botón de eliminación
+        let botonEliminar = document.createElement('button');
+        botonEliminar.textContent = "❌";
+        botonEliminar.style.marginLeft = "10px";
+        botonEliminar.onclick = function() {
+            eliminarAmigo(amigos[i]);
+        };
+        li.appendChild(botonEliminar);
         listaAmigos.appendChild(li);
 
     }
 
+}
+
+function eliminarAmigo(amigo) {
+    let index = amigos.indexOf(amigo);
+    if (index !== -1) {
+        amigos.splice(index, 1); // Elimina el nombre de la lista
+        actualizarLista(); // Actualiza la lista en el DOM
+        alert(`Se eliminó a ${amigo} de la lista.`);
+    }
 }
 
 function sortearAmigo() {
