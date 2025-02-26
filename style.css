@@ -137,6 +137,29 @@ button {
 }
 
 /* Listas */
+.name-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+.name-list li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #333;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+.name-list li:hover {
+    background-color: #e0e0e0;
+}
+
 ul {
     list-style-type: none;
     color: var(--color-text);
@@ -147,10 +170,13 @@ ul {
 
 .result-list {
     margin-top: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
     color: #05DF05;
     font-size: 22px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 }
 
 /* Botón de sortear título */
@@ -191,6 +217,21 @@ ul {
 
 .button-reload:hover {
     background-color: #a1a1a1;
+}
+/*boton eliminar*/
+.delete-button {
+    background-color: #ff5a5a;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #d9534f;
 }
 
 @media (max-width: 480px) {
