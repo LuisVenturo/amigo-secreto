@@ -200,6 +200,9 @@ ul {
     .main-title {
         font-size: 32px;
     }
+    .main-content{
+        width: auto;
+    }
 
     .section-title {
         font-size: 28px;
@@ -232,12 +235,15 @@ ul {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .header-banner {
         flex-direction: column-reverse;
     }
     .main-title {
         font-size: 40px;
+    }
+    .main-content{
+        width: auto;
     }
 
     .section-title {
@@ -262,7 +268,7 @@ ul {
 @media (min-width: 1025px) {
 
     .main-content {
-        max-width: 800px;
+        width: auto;
     }
 
     .button-draw, .button-reload {
