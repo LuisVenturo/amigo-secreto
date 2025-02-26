@@ -10,8 +10,18 @@ function agregarAmigo() {
         alert("Por favor, ingresa un nombre válido.");
         limpiarCampo();
         return;
+    }else if (amigos.includes(nombre)) {
+        alert("El nombre se repite, ingrese otro distinto!");
+        limpiarCampo();
+        return;
     }
     amigos.push(nombre);
+    limpiarCampo();
+    eliminarAmigo(nombre);
+}
+
+
+function eliminarAmigo(nombre) {
     const lista = document.getElementById('listaAmigos');
 
     // Crear elemento li
@@ -39,12 +49,11 @@ function agregarAmigo() {
     input.value = "";
 }
 
-
 function limpiarCampo() {
     document.querySelector('#amigo').value = '';
 }
 
-function actualizarLista() {
+/*function actualizarLista() {
     let listaAmigos = document.getElementById('listaAmigos');
     listaAmigos.innerHTML = '';
 
@@ -60,16 +69,7 @@ function actualizarLista() {
 
     }
 
-}
-
-function eliminarAmigo(amigo) {
-    let index = amigos.indexOf(amigo);
-    if (index !== -1) {
-        amigos.splice(index, 1); // Elimina el nombre de la lista
-        actualizarLista(); // Actualiza la lista en el DOM
-        alert(`Se eliminó a ${amigo} de la lista.`);
-    }
-}
+}*/
 
 function sortearAmigo() {
     if (amigos.length > 0) {
